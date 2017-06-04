@@ -1,5 +1,5 @@
-#include "../blas/hypre_blas.h"
 #include "hypre_lapack.h"
+#include "../blas/hypre_blas.h"
 #include "f2c.h"
 
 /*  -- translated by f2c (version 19990503).

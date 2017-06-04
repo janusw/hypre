@@ -1,5 +1,5 @@
-#include "../blas/hypre_blas.h"
 #include "hypre_lapack.h"
+#include "../blas/hypre_blas.h"
 #include "f2c.h"
 
 /* Subroutine */ HYPRE_Int dsygst_(integer *itype,const char *uplo, integer *n, 

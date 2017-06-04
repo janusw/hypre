@@ -4,9 +4,9 @@
 	-lf2c -lm   (in that order)
 */
 
+#include <math.h>
 #include "f2c.h"
 #include "hypre_blas.h"
-#include "math.h"
 
 doublereal dnrm2_(integer*n,doublereal* dx,integer* incx)
 {

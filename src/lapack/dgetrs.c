@@ -1,6 +1,5 @@
-
-#include "../blas/hypre_blas.h"
 #include "hypre_lapack.h"
+#include "../blas/hypre_blas.h"
 #include "f2c.h"
 
 /* Subroutine */ HYPRE_Int dgetrs_(char *trans, integer *n, integer *nrhs, 
