@@ -1,5 +1,5 @@
-#include "../blas/hypre_blas.h"
 #include "hypre_lapack.h"
+#include "../blas/hypre_blas.h"
 #include "f2c.h"
 
 /* Subroutine */ HYPRE_Int dlarf_(const char *side, integer *m, integer *n, doublereal *v,

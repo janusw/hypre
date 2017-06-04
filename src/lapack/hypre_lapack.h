@@ -14,9 +14,9 @@
 
 #ifndef HYPRE_LAPACK_H
 #define HYPRE_LAPACK_H
+#include <math.h>
 #include "f2c.h"
 #include "fortran.h"
-#include "math.h"
 
 #ifdef __cplusplus
 extern "C" {
