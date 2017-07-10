@@ -767,10 +767,16 @@ if (HYPRE_USING_OPENMP)
 endif (HYPRE_USING_OPENMP)
 
 # Turn optimization off for this file
-set_source_files_properties (lapack/dlamch.c PROPERTIES COMPILE_FLAGS -O0)
+if (MSVC)
+  set_source_files_properties (lapack/dlamch.c PROPERTIES COMPILE_FLAGS /Od)
+else ()
+  set_source_files_properties (lapack/dlamch.c PROPERTIES COMPILE_FLAGS -O0)
+endif ()
 
 if (MSVC)
   add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+  # Use the C++ compiler to compile these files to get around lack of C99 support
+  set_source_files_properties (parcsr_ls/par_nongalerkin.c PROPERTIES LANGUAGE CXX)
 endif ()
 
 if (HYPRE_USING_FEI)
