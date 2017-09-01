@@ -10,6 +10,7 @@
  * $Revision$
  ***********************************************************************EHEADER*/
 
+#include <omp.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include "_hypre_utilities.h"
