@@ -779,6 +779,8 @@ if (MSVC)
   add_definitions(-D_CRT_SECURE_NO_WARNINGS)
   # Use the C++ compiler to compile these files to get around lack of C99 support
   set_source_files_properties (parcsr_ls/par_nongalerkin.c PROPERTIES LANGUAGE CXX)
+  #Fix issue with visual studio 2013
+  set_source_files_properties (struct_ls/pfmg3_setup_rap.c PROPERTIES COMPILE_FLAGS /Od)
 endif ()
 
 if (HYPRE_USING_FEI)
