@@ -776,6 +776,9 @@ else ()
 endif ()
 
 if (MSVC)
+  # make Visual Studio compile in parallel
+  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
+  SET(CMAKE_C_FLAGS   "${CMAKE_C_FLAGS} /MP")
   add_definitions(-D_CRT_SECURE_NO_WARNINGS)
   # Use the C++ compiler to compile these files to get around lack of C99 support
   set_source_files_properties (parcsr_ls/par_nongalerkin.c PROPERTIES LANGUAGE CXX)
