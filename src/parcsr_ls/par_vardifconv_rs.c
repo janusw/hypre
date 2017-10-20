@@ -493,6 +493,10 @@ HYPRE_Real cfun_rs(HYPRE_Real xx, HYPRE_Real yy, HYPRE_Real zz)
    return value;
 }
 
+#ifndef M_PI
+#define M_PI 3.14159265358979
+#endif
+
 HYPRE_Real dfun_rs(HYPRE_Real xx, HYPRE_Real yy, HYPRE_Real zz)
 {
    HYPRE_Real value;
