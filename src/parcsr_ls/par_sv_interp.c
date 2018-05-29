@@ -608,7 +608,7 @@ HYPRE_Int hypre_BoomerAMG_GMExpandInterp( hypre_ParCSRMatrix *A,
       }
 
       /* get function num for this row */
-      fcn_num = (HYPRE_Int) fmod(i, num_functions); 
+      fcn_num = (HYPRE_Int) fmod((float)i, (float)num_functions); 
       
       if (fcn_num != dof_func[i]) 
          hypre_error_w_msg(HYPRE_ERROR_GENERIC,"WARNING - ROWS incorrectly ordered in hypre_BoomerAMG_GMExpandInterp!\n");
@@ -1813,7 +1813,7 @@ HYPRE_Int hypre_BoomerAMGRefineInterp( hypre_ParCSRMatrix *A,
        scale_row = 0;
        orig_row_sum = 0.0;
 
-       fcn_num = (HYPRE_Int) fmod(i, num_functions);
+       fcn_num = (HYPRE_Int) fmod((float)i, (float)num_functions);
        if (fcn_num != dof_func[i]) 
          hypre_error_w_msg(HYPRE_ERROR_GENERIC,"WARNING - ROWS incorrectly ordered in hypre_BoomerAMGRefineInterp!\n");
       
