@@ -16,6 +16,10 @@
 #include "_hypre_lapack.h"
 #include "_hypre_blas.h"
 
+#ifdef _MSC_VER
+#define __func__ __FUNCTION__
+#endif
+
 /* RDF: The following prototype already exists in _hypre_parcsr_ls.h, so
  * something needs to be reorganized here.*/
 

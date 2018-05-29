@@ -810,6 +810,7 @@ if (MSVC)
   if (MSVC_VERSION LESS 1911)
     # Use the C++ compiler to compile these files to get around lack of C99 support
     set_source_files_properties (utilities/hypre_hopscotch_hash.c PROPERTIES COMPILE_FLAGS /TP)
+    set_source_files_properties (utilities/hypre_memory.c         PROPERTIES COMPILE_FLAGS /TP)
     set_source_files_properties (utilities/hypre_merge_sort.c     PROPERTIES COMPILE_FLAGS /TP)
     set_source_files_properties (seq_mv/csr_matop.c               PROPERTIES COMPILE_FLAGS /TP)
     set_source_files_properties (parcsr_mv/par_csr_matop.c        PROPERTIES COMPILE_FLAGS /TP)
