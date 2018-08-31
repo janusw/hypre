@@ -78,6 +78,7 @@ hypre_MPI_Comm_create( hypre_MPI_Comm   comm,
                        hypre_MPI_Group  group,
                        hypre_MPI_Comm  *newcomm )
 {
+   *newcomm = hypre_MPI_COMM_NULL;
    return(0);
 }
 
